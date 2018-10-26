@@ -2,8 +2,8 @@
 Exam 3, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Michael Kuznicki.  October, 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -84,6 +84,32 @@ And this one for n=14:
     #   you must NOT use string multiplication.
     ####################################################################
 
+    for k in range(n - 1, -1, -1):
+        for j in range(k):
+            print(' ', end='')
+
+        for i in range(1, (n - k + 1)):
+            if i >= 10:
+                print(i % 10, end='')
+            else:
+                print(i, end='')
+
+        for h in range(1):
+            print(' ', end='')
+
+        for g in range(n + 1 - k):
+            print('*', end='')
+
+        for f in range(1):
+            print(' ', end='')
+
+        for e in range(k + 1, 0, -1):
+            if e >= 10:
+                print(e % 10, end='')
+            else:
+                print(e, end='')
+
+        print('')
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
